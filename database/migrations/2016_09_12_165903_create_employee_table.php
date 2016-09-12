@@ -22,7 +22,6 @@ class CreateEmployeeTable extends Migration
             // $table->timestamps();          //created_at and updated_at
         });
     }
-
     /**
      * Reverse the migrations.
      *
