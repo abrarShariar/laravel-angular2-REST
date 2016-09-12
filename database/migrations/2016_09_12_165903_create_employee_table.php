@@ -19,7 +19,7 @@ class CreateEmployeeTable extends Migration
             $table->string('lastname');
             $table->date('DOB');
             $table->string('description',100);    //description max = 100 char
-            $table->timestamps();          //created_at and updated_at
+            // $table->timestamps();          //created_at and updated_at
         });
     }
 
