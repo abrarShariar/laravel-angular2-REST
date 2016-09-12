@@ -15,9 +15,7 @@ class EmployeeController extends Controller
     public function index()
     {
           $employeeList = Employee::all();
-          foreach ($employeeList as $key => $value) {
-              echo $key." : ".$value."<br>";
-          }
+          return response()->json($employeeList);
 
     }
 
