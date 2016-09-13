@@ -12,3 +12,4 @@
 */
 Route::get('/all','EmployeeController@index');
 Route::get('/store','EmployeeController@store');
+Route::get('/show/id={id}','EmployeeController@show');
