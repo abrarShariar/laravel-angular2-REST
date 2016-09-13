@@ -10,6 +10,11 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::get('/all','EmployeeController@index');
-Route::get('/store','EmployeeController@store');
-Route::get('/show/id={id}','EmployeeController@show');
+//Resources controller routes goes here
+//root page
+Route::get('/',function(){
+    return view('pages/index');
+});
+
+//test route
+//Route::get('/delete/id={id}','EmployeeController@delete');
