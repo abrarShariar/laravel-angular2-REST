@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+// routes defined here have a auto "/api/" prefix added
+// middleware('auth:api') for authenticate user for accessiing the API
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+//get specific employee where id == $id
+Route::get('/show/id={id}','EmployeeController@show');
