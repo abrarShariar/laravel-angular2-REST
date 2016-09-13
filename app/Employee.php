@@ -11,4 +11,6 @@ class Employee extends Model
     *
     */
     protected $table = 'employee';
+    //mass-assignment issue
+    protected $fillable = ['firstname','lastname','DOB','description'];
 }

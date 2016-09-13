@@ -7,39 +7,38 @@ use App\Employee;
 
 class EmployeeController extends Controller
 {
+    public $employeeList;
+    //fethning all data
+    public function __construct(){
+        $this->employeeList = Employee::all();
+      }
     /**
-     * Display a listing of the resource.
-     *
+     * Display a listing of all data
      * @return back all data in JSON
      */
     public function index()
     {
-          $employeeList = Employee::all();
-          return response()->json($employeeList);
-
+          return response()->json($this->employeeList);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * create a new
      *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
+     * @return JSON Response
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     *
      */
     public function store(Request $request)
     {
-        //
+        //store a new employee data in DB
+        Employee::create([
+          'firstname' => 'Steve',
+          'lastname' => 'Jobs',
+          'DOB' => '1990-01-01',
+          'description' => 'Apple is the game',
+        ]);
+        return response()->json(array('success' => 'true'));
     }
-
     /**
      * Display the specified resource.
      *

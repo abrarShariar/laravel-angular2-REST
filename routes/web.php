@@ -10,4 +10,5 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::get('/','EmployeeController@index');
+Route::get('/all','EmployeeController@index');
+Route::get('/store','EmployeeController@store');
