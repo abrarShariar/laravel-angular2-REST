@@ -99,8 +99,14 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        //delete a specific employee id == $id
+        $res = Employee::where('id',$id)->delete();
+        if($res == 0){
+          return response()->json(array('success' => false));
+        }else{
+          return response()->json(array('success' => true));
+        }
     }
 }
