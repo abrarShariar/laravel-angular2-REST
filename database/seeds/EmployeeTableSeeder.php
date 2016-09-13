@@ -18,7 +18,7 @@ class EmployeeTableSeeder extends Seeder
             'firstname' => 'Charles',
             'lastname' => 'Xavier',
             'DOB' => '1990-01-01',
-            'description' => 'Created school for gifted youths'
+            'description' => 'Created school for gifted youths',
         ]);
 
         DB::table('employee')->insert([
