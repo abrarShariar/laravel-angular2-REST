@@ -31,11 +31,26 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         //store a new employee data in DB
+        /*sample data input format
+         Employee::create([
+           'firstname' => 'Steve',
+           'lastname' => 'Jobs',
+           'DOB' => '1990-01-01',
+           'description' => 'Apple is the game',
+         ]);
+         */
+
+        //get input data
+        $fname = $request->input('fname');
+        $lname = $request->input('lname');
+        $dob = $request->input('dob');
+        $desc = $request->input('desc');
+
         Employee::create([
-          'firstname' => 'Steve',
-          'lastname' => 'Jobs',
-          'DOB' => '1990-01-01',
-          'description' => 'Apple is the game',
+            'firstname' => $fname,
+            'lastname' => $lname,
+            'DOB' => $dob,
+            'description' => $desc
         ]);
         return response()->json(array('success' => 'true'));
     }
@@ -43,13 +58,18 @@ class EmployeeController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JSON Response
      */
     public function show($id)
     {
-        //
+        //fetch a sepcific employee with id == $id
+        $data = Employee::where('id',$id)->first();
+        if($data == NULL){
+          return 0;
+        }else{
+          return response()->json($data);
+        }
     }
-
     /**
      * Show the form for editing the specified resource.
      *
