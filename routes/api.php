@@ -18,10 +18,6 @@ use Illuminate\Http\Request;
 //get all employee data
 Route::get('/all','EmployeeController@index')->middleware('cors');
 // get specific employee where id == $id
-Route::get('/show/id={id}','EmployeeController@show');
+Route::get('/show/id={id}','EmployeeController@show')->middleware('cors');
 // store new employee data
 Route::get('/store','EmployeeController@store');
-
-// Route::get('/user', function (Request $request) {
-//     return $request->user();
-// })->middleware('auth:api');

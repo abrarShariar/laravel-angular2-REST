@@ -12,9 +12,7 @@
 */
 //Resources controller routes goes here
 //root page
-Route::get('/',function(){
-    return view('pages/index');
-});
+Route::get('/','MainController@index');
 
 //test route
 //Route::get('/delete/id={id}','EmployeeController@delete');
