@@ -8,9 +8,16 @@ import { AllEmployeeComponent } from './components/allEmployee.component';
 //routing
 import { routing } from './app.routing';
 
+//services
+import { AllEmployeeService } from './services/allEmployee.service';
+
+import { FormsModule }   from '@angular/forms';
+import { HttpModule }    from '@angular/http';
+
 @NgModule({
-  imports:      [ BrowserModule,routing ],
-  declarations: [ AppComponent,AllEmployeeComponent ],
+  imports:      [ BrowserModule, routing, HttpModule, FormsModule ],
+  declarations: [ AppComponent, AllEmployeeComponent ],
+  providers:  [ AllEmployeeService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
