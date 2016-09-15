@@ -5,6 +5,17 @@
 /public/storage
 /vendor
 /.idea
+
+/ng2/app/*.js
+/ng2/app/*.map
+/ng2/node_modules
+/ng2/typings
+/ng2/app/components/*.js
+/ng2/app/components/*.map
+/ng2/npm-debug.log
+/ng2/app/services/*.js
+/ng2/app/services/*.map
+
 Homestead.json
 Homestead.yaml
 .env
