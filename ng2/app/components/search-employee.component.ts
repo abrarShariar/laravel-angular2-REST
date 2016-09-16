@@ -44,7 +44,7 @@ export class SearchEmployeeComponent{
           this.prevResponse = this.response;
         }
         this.apiUrl = "http://localhost:8000/api/show/id=";
-        this.prevEmployeeId = this.emplyeeId;
+        this.prevEmployeeId = this.employeeId;
     }
 
 

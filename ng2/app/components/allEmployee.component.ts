@@ -26,7 +26,7 @@ export class AllEmployeeComponent implements OnInit{
     }
 
     ngDoCheck(){
-      if(this.response && !this.haDumped){
+      if(this.response && !this.hasDumped){
           this.setEmployeeList(this.response);
           this.hasDumped = true;
           //console.log(this.employeeList);
