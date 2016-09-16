@@ -1,5 +1,8 @@
 <?php
 
+
+
+// for CORS related issues
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
