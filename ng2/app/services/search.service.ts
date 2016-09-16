@@ -10,15 +10,15 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class SearchService{
 
-    private apiUrl = "http://localhost:8000/api/show/id=";   //for running locally only
+    // private apiUrl = "http://localhost:8000/api/show/id=";   //for running locally only
 
     constructor(private http:Http){}
 
     //get data of the specific id
-    getData(id:number):Observable<any>{
+    getData(url:any):Observable<any>{
 
-        this.apiUrl = this.apiUrl + id;
-        return this.http.get(this.apiUrl)
+        //this.apiUrl = this.apiUrl + id;
+        return this.http.get(url)
                         .map(this.extractData)
                         .catch(this.handleError);
 
@@ -30,7 +30,7 @@ export class SearchService{
           throw new Error("Bad response status: " + res.status);
         }
         let body = res.json();
-        console.log(body);
+        // console.log(body);
         return body || {};
     }
 
