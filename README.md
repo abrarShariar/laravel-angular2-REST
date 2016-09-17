@@ -7,6 +7,31 @@ RESTful backend with Laravel 5.3 and Angular 2 as frontend
 * Other directories/files in the project root belongs to Laravel (5.3)
 
 
+## Getting Up and Running
+
+* Start PHP's built-in development server for Laravel  
+
+```sh
+	git clone https://github.com/abrarShariar/laravel-angular2-REST.git
+	
+	cd laravel-angular2-REST
+	
+	php artisan serve
+
+```
+
+* Start lite-server for Angular 2
+
+```sh
+	cd laravel-angular2-REST
+	
+	cd ng2
+
+	npm start
+
+```
+
+
 ## RESTful Backend with Laravel 5.3
 
 * Some of the config files are not in the repo since they are kept as is out-of-the-box.
