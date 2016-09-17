@@ -14,5 +14,12 @@
 //root page
 Route::get('/','MainController@index');
 
+//route for showing form
+Route::get('/create','MainController@create');
+
+//store data after form submission
+Route::post('/employee/store','MainController@store');
+
+
 //test route
 //Route::get('/delete/id={id}','EmployeeController@delete');
