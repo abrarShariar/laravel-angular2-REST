@@ -5,7 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 //import components
 import { AppComponent } from './app.component';
 import { AllEmployeeComponent } from './components/allEmployee.component';
-import { SearchEmployeeComponent } from './components/search-employee.component'; 
+import { SearchEmployeeComponent } from './components/search-employee.component';
+import { AddEmployeeComponent } from './components/add-employee.component';
 
 
 const appRoutes: Routes = [
@@ -16,6 +17,10 @@ const appRoutes: Routes = [
   {
     path: 'search',
     component: SearchEmployeeComponent
+  },
+  {
+    path: 'employee/add',
+    component: AddEmployeeComponent
   }
 ];
 

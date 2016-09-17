@@ -18,7 +18,7 @@ Route::get('/','MainController@index');
 Route::get('/create','MainController@create');
 
 //store data after form submission
-Route::post('/employee/store','MainController@store');
+Route::post('/employee/store','MainController@store')->middleware('cors');
 
 
 //test route
