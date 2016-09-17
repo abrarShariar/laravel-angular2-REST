@@ -16,8 +16,9 @@
 /ng2/app/services/*.js
 /ng2/app/services/*.map
 
+/.env*
+
 Homestead.json
 Homestead.yaml
-.env
+
 composer.lock
-.env*
