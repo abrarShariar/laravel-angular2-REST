@@ -49,3 +49,18 @@ RESTful backend with Laravel 5.3 and Angular 2 as frontend
 * Now run `php artisan serve` in the project root and you will be Up and Running !!
 
 
+* API endpoints defined in [api.php](https://github.com/abrarShariar/laravel-angular2-REST/blob/master/routes/api.php)
+
+```php
+	/api/all		//get all employee data		
+	/api/show/id=$id	//get specific employee data
+```
+
+* Web routes defined in [web.php](https://github.com/abrarShariar/laravel-angular2-REST/blob/master/routes/web.php)
+
+```php
+	/create			//create a new employee recored
+				//authentication required
+```
+
+
