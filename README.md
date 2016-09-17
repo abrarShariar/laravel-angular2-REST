@@ -7,7 +7,7 @@ RESTful backend with Laravel 5.3 and Angular 2 as frontend
 * Other directories/files in the project root belongs to Laravel (5.3)
 
 
-##  RESTful Backend with Laravel 5.3
+## RESTful Backend with Laravel 5.3
 
 * Some of the config files are not in the repo since they are kept as is out-of-the-box.
 
@@ -62,5 +62,25 @@ RESTful backend with Laravel 5.3 and Angular 2 as frontend
 	/create			//create a new employee recored
 				//authentication required
 ```
+
+
+## Angular 2 Frontend
+
+* routes defined [app.routing](https://github.com/abrarShariar/laravel-angular2-REST/blob/master/ng2/app/app.routing.ts)
+
+```js
+	/employee/all		//show all employee data
+	/employee/add 		//add new employee
+	/search			//search employee
+
+``` 
+
+
+
+## TO-DO
+
+* FIX `/employee/add` in [ng2](https://github.com/abrarShariar/laravel-angular2-REST/tree/master/ng2)
+
+* FIX http.post() in [AddEmployeeService](https://github.com/abrarShariar/laravel-angular2-REST/tree/master/ng2/app/services)
 
 
